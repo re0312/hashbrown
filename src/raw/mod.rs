@@ -35,8 +35,10 @@ cfg_if! {
         mod neon;
         use neon as imp;
     } else {
-        mod generic;
-        use generic as imp;
+        mod sse2;
+        use sse2 as imp;
+        // mod generic;
+        // use generic as imp;
     }
 }
 
